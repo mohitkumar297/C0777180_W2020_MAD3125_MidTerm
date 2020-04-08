@@ -158,6 +158,16 @@ public class PersonInformation implements Parcelable {
         this.totalTaxPayed = totalTaxPayed;
     }
 
+    public PersonInformation(String sin, String firstName, String lastName, String dateOfBirth, String gender, float grossIncome, float RRSPContributed) {
+        this.sin = sin;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.grossIncome = grossIncome;
+        this.RRSPContributed = RRSPContributed;
+    }
+
     public static Creator<PersonInformation> getCREATOR() {
         return CREATOR;
     }
