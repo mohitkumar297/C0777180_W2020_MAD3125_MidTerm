@@ -1,9 +1,9 @@
 package com.example.c0777180_w2020_mad3125_midterm;
 
 import android.app.DatePickerDialog;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -11,7 +11,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -54,6 +53,10 @@ public class PersonInformationActivity extends AppCompatActivity {
     TextView txtTaxFilingDate;
     @InjectView(R.id.txtDOB)
     EditText txtDOB;
+    @InjectView(R.id.btnSubmit)
+    Button btnSubmit;
+    @InjectView(R.id.btnClear)
+    Button btnClear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
