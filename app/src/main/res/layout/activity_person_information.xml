@@ -83,20 +83,11 @@
         android:orientation="horizontal"
         android:layout_marginTop="15dp">
 
-        <TextView
-            android:layout_width="0dp"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Date of Birth"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:textColor="#000"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="select date"
-            android:id="@+id/btnDOB"/>
+            android:hint="Date Of Birth"
+            android:id="@+id/txtDOB"/>
 
 
 
@@ -195,6 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Gross Income"
+                android:drawableStart="@drawable/ic_attach_money_black_24dp"
                 android:inputType="textPersonName"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -218,6 +210,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter RRSP Contributed"
+                android:drawableStart="@drawable/ic_attach_money_black_24dp"
                 android:inputType="textPersonName"
                 />
         </com.google.android.material.textfield.TextInputLayout>

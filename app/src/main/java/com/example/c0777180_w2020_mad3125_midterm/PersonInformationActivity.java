@@ -32,8 +32,6 @@ public class PersonInformationActivity extends AppCompatActivity {
     TextInputEditText txtFirstName;
     @InjectView(R.id.txtLastName)
     TextInputEditText txtLastName;
-    @InjectView(R.id.btnDOB)
-    Button btnDOB;
     @InjectView(R.id.radioMale)
     RadioButton radioMale;
     @InjectView(R.id.radioFemale)
@@ -68,7 +66,6 @@ public class PersonInformationActivity extends AppCompatActivity {
         txtTaxFilingDate.setText(today);
 
         btnDOB.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
 
@@ -98,7 +95,7 @@ public class PersonInformationActivity extends AppCompatActivity {
 
     };
 
-    int calculateAge(long date){
+    public int calculateAge(long date){
        Calendar dob = Calendar.getInstance();
        dob.setTimeInMillis(date);
 
