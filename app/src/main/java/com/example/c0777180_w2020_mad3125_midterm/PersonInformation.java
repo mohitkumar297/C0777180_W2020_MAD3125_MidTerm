@@ -4,6 +4,16 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class PersonInformation implements Parcelable {
+    private String Sin;
+    private String FirstName;
+    private String LastName;
+    private String DateOfBirth;
+    private String Gender;
+    private String TaxDate;
+    private float GrossIncome;
+
+
+
     protected PersonInformation(Parcel in) {
     }
 
