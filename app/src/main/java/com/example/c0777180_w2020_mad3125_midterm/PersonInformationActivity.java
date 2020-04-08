@@ -1,6 +1,8 @@
 package com.example.c0777180_w2020_mad3125_midterm;
 
 import android.app.DatePickerDialog;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -58,6 +61,8 @@ public class PersonInformationActivity extends AppCompatActivity {
     Button btnSubmit;
     @InjectView(R.id.btnClear)
     Button btnClear;
+    @InjectView(R.id.inputLayoutSIN)
+    TextInputLayout inputLayoutSIN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,9 +119,28 @@ public class PersonInformationActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btnSubmit:
+                confirmInput();
                 break;
             case R.id.btnClear:
                 break;
+        }
+
+
+    }
+    public boolean validateSIN(){
+        if (txtSIN.length()!=9){
+            inputLayoutSIN.setError("INVALID SIN");
+            return false;
+        }
+        else {
+            inputLayoutSIN.setError(null);
+            return true;
+        }
+    }
+
+    public void confirmInput(){
+        if (!validateSIN()){
+            return;
         }
     }
 }
