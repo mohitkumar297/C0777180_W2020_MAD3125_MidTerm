@@ -168,11 +168,24 @@ public class PersonInformation implements Parcelable {
         this.RRSPContributed = RRSPContributed;
     }
 
-    public static Creator<PersonInformation> getCREATOR() {
-        return CREATOR;
-    }
-
     protected PersonInformation(Parcel in) {
+        sin = in.readString();
+        firstName = in.readString();
+        lastName = in.readString();
+        dateOfBirth = in.readString();
+        gender = in.readString();
+        grossIncome = in.readFloat();
+        RRSPContributed = in.readFloat();
+        fullName = in.readString();
+        age = in.readInt();
+        taxFilingDate = in.readString();
+        federalTax = in.readFloat();
+        provincialTax = in.readFloat();
+        CPP = in.readFloat();
+        EI = in.readFloat();
+        carryForwardRRSP = in.readFloat();
+        totalTaxableIncome = in.readFloat();
+        totalTaxPayed = in.readFloat();
     }
 
     public static final Creator<PersonInformation> CREATOR = new Creator<PersonInformation>() {
@@ -194,5 +207,22 @@ public class PersonInformation implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(sin);
+        dest.writeString(firstName);
+        dest.writeString(lastName);
+        dest.writeString(dateOfBirth);
+        dest.writeString(gender);
+        dest.writeFloat(grossIncome);
+        dest.writeFloat(RRSPContributed);
+        dest.writeString(fullName);
+        dest.writeInt(age);
+        dest.writeString(taxFilingDate);
+        dest.writeFloat(federalTax);
+        dest.writeFloat(provincialTax);
+        dest.writeFloat(CPP);
+        dest.writeFloat(EI);
+        dest.writeFloat(carryForwardRRSP);
+        dest.writeFloat(totalTaxableIncome);
+        dest.writeFloat(totalTaxPayed);
     }
 }
