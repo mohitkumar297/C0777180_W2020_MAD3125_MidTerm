@@ -4,14 +4,23 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class PersonInformation implements Parcelable {
-    private String Sin;
-    private String FirstName;
-    private String LastName;
-    private String DateOfBirth;
-    private String Gender;
-    private String TaxDate;
-    private float GrossIncome;
-
+    private String sin;
+    private String firstName;
+    private String lastName;
+    private String dateOfBirth;
+    private String gender;
+    private float grossIncome;
+    private float RRSPContributed;
+    private String fullName;
+    private int age;
+    private String taxFilingDate;
+    private float federalTax;
+    private float provincialTax;
+    private float CPP;
+    private float EI;
+    private float carryForwardRRSP;
+    private float totalTaxableIncome;
+    private float totalTaxPayed;
 
 
     protected PersonInformation(Parcel in) {
