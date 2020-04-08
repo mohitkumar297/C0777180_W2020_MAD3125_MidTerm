@@ -97,8 +97,12 @@ public class PersonInformationActivity extends AppCompatActivity {
             c.set(Calendar.MONTH, month);
             c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             String format = new SimpleDateFormat("dd-MM-YYYY").format(c.getTime());
-            if ()
+            if (calculateAge(c.getTimeInMillis())<18){
+                inputLayoutDOB.setError("NOT ELIGIBLE");
+            }
+            else{
             txtDOB.setText(format);
+            inputLayoutDOB.setError(null);}
             //FOR AGE DISPLAY txtTaxFilingDate.setText(Integer.toString(calculateAge(c.getTimeInMillis())));
         }
 
