@@ -29,7 +29,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="SIN Number"
-                android:drawableStart="@drawable/canada"
+                android:drawableStart="@drawable/ic_canada"
+                android:drawablePadding="10dp"
                 android:textColor="#FFF"
                 android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -59,7 +60,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Enter First Name"
+            android:hint="First Name"
+            android:drawablePadding="10dp"
             android:drawableStart="@drawable/ic_person_black_24dp"
             android:inputType="textPersonName"
             />
@@ -81,7 +83,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Enter Last Name"
+                android:hint="Last Name"
+                android:drawablePadding="10dp"
                 android:drawableStart="@drawable/ic_person_black_24dp"
                 android:inputType="textPersonName"
                 />
@@ -108,7 +111,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Date Of Birth"
+                android:hint="      Date Of Birth"
+
                 android:drawableEnd="@drawable/ic_date_range_black_24dp"
                 android:id="@+id/txtDOB"
                 android:focusable="false"
@@ -212,6 +216,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Gross Income"
+                android:drawablePadding="10dp"
                 android:drawableStart="@drawable/ic_attach_money_black_24dp"
                 android:inputType="textPersonName"
                 />
@@ -238,6 +243,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:hint="Enter RRSP Contributed"
+                android:drawablePadding="10dp"
                 android:drawableStart="@drawable/ic_attach_money_black_24dp"
                 android:inputType="textPersonName"
                 />
@@ -269,6 +275,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="5dp"
             android:background="@drawable/btn_bg"
+
             android:textColor="@color/form_details_medium"
             android:layout_weight="1"
             android:text="CLEAR"
