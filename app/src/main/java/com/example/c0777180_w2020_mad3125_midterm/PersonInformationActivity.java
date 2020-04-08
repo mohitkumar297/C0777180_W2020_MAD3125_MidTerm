@@ -1,6 +1,7 @@
 package com.example.c0777180_w2020_mad3125_midterm;
 
 import android.app.DatePickerDialog;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
@@ -10,6 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -23,7 +25,7 @@ import butterknife.InjectView;
 public class PersonInformationActivity extends AppCompatActivity {
 
     @InjectView(R.id.txtSIN)
-    TextInputEditText txtSIN;
+    EditText txtSIN;
     @InjectView(R.id.txtFirstName)
     TextInputEditText txtFirstName;
     @InjectView(R.id.txtLastName)

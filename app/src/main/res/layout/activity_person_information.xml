@@ -5,19 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
+    android:background="@drawable/bg_form"
     android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:textColorHint="@color/form_details_medium"
             android:layout_marginTop="10dp"
+
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -25,9 +29,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="SIN Number"
-                android:inputType="textPersonName"
-                />
+                android:drawableStart="@drawable/canada"
+                android:textColor="#FFF"
+                android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
 
@@ -36,29 +42,35 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:textColorHint="@color/form_details_medium"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtFirstName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter First Name"
-                android:layout_weight="1"
-                android:inputType="textPersonName"
-                />
-
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter First Name"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:inputType="textPersonName"
+            />
         </com.google.android.material.textfield.TextInputLayout>
+
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColorHint="@color/form_details_medium"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
@@ -70,6 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="Enter Last Name"
+                android:drawableStart="@drawable/ic_person_black_24dp"
                 android:inputType="textPersonName"
                 />
 
@@ -83,12 +96,24 @@
         android:orientation="horizontal"
         android:layout_marginTop="15dp">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Date Of Birth"
-            android:id="@+id/txtDOB"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColorHint="@color/form_details_medium"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date Of Birth"
+                android:drawableEnd="@drawable/ic_date_range_black_24dp"
+                android:id="@+id/txtDOB"
+                android:focusable="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
     </LinearLayout>
@@ -177,6 +202,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:textColorHint="@color/form_details_medium"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -201,6 +227,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:textColorHint="@color/form_details_medium"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -209,6 +236,7 @@
                 android:id="@+id/txtRRSPContributed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#fff"
                 android:hint="Enter RRSP Contributed"
                 android:drawableStart="@drawable/ic_attach_money_black_24dp"
                 android:inputType="textPersonName"
@@ -216,6 +244,53 @@
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_bg"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/form_details_medium"
+            android:layout_weight="1"
+            android:text="SUBMIT"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/form_details_medium"
+            android:layout_weight="1"
+            android:text="CLEAR"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
 
 
 </LinearLayout>
+
+
+
+<!--<EditText-->
+<!--android:layout_width="0dp"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_weight="1"-->
+<!--android:hint="Enter Sin Number"-->
+<!--android:padding="16dp"-->
+<!--android:background="@drawable/et_bg"-->
+<!--android:id="@+id/txtSIN"-->
+<!--android:layout_marginLeft="10dp"-->
+<!--android:layout_marginRight="10dp"-->
+<!--android:layout_marginTop="16dp"-->
+<!--android:inputType="textPersonName"/>-->
