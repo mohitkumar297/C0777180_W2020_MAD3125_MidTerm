@@ -20,6 +20,7 @@ import java.util.Date;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 
 public class PersonInformationActivity extends AppCompatActivity {
 
@@ -107,5 +108,15 @@ public class PersonInformationActivity extends AppCompatActivity {
         age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
         return age;
 
+    }
+
+    @OnClick({R.id.btnSubmit, R.id.btnClear})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btnSubmit:
+                break;
+            case R.id.btnClear:
+                break;
+        }
     }
 }
