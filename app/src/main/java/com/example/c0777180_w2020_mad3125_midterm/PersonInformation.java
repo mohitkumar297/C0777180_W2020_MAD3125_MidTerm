@@ -128,6 +128,7 @@ public class PersonInformation implements Parcelable {
         this.RRSPContributed = RRSPContributed;
     }
 
+
     protected PersonInformation(Parcel in) {
         sin = in.readString();
         firstName = in.readString();
