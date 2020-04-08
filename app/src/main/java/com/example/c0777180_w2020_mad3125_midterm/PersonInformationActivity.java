@@ -1,6 +1,7 @@
 package com.example.c0777180_w2020_mad3125_midterm;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -77,15 +78,6 @@ public class PersonInformationActivity extends AppCompatActivity {
         txtTaxFilingDate.setText(today);
 
 
-
-
-//        radio.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                radio1
-//            }
-//        });
-
         txtDOB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,7 +129,10 @@ public class PersonInformationActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btnSubmit:
-                confirmInput();
+                if (validateSIN()){
+                    Intent intent = new Intent(PersonInformationActivity.this,DataDisplayActivity.class);
+                    startActivity(intent);
+                }
                 break;
             case R.id.btnClear:
                 break;
@@ -156,11 +151,11 @@ public class PersonInformationActivity extends AppCompatActivity {
         }
     }
 
-    public void confirmInput() {
-        if (!validateSIN()) {
-            return;
-        }
-    }
+//    public void confirmInput() {
+//        if (!validateSIN()) {
+//            return;
+//        }
+//    }
 
     public void maleClick(View view) {
         radioMale.setTextColor(Color.GREEN);
