@@ -1,6 +1,7 @@
 package com.example.c0777180_w2020_mad3125_midterm;
 
 import android.app.DatePickerDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,6 +44,7 @@ public class PersonInformationActivity extends AppCompatActivity {
     TextInputEditText txtGrossIncome;
     @InjectView(R.id.txtRRSPContributed)
     TextInputEditText txtRRSPContributed;
+    private RadioButton radio1;
 
     int year;
     int month;
@@ -74,6 +76,16 @@ public class PersonInformationActivity extends AppCompatActivity {
         String today = sdf.format(new Date());
         txtTaxFilingDate.setText(today);
 
+
+
+
+//        radio.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                radio1
+//            }
+//        });
+
         txtDOB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +114,8 @@ public class PersonInformationActivity extends AppCompatActivity {
             }
             else{
             txtDOB.setText(format);
-            inputLayoutDOB.setError(null);}
+            inputLayoutDOB.setError(null);
+            inputLayoutDOB.setErrorEnabled(false);}
             //FOR AGE DISPLAY txtTaxFilingDate.setText(Integer.toString(calculateAge(c.getTimeInMillis())));
         }
 
@@ -147,5 +160,21 @@ public class PersonInformationActivity extends AppCompatActivity {
         if (!validateSIN()) {
             return;
         }
+    }
+
+    public void maleClick(View view) {
+        radioMale.setTextColor(Color.GREEN);
+        radioFemale.setTextColor(Color.BLACK);
+        radioOther.setTextColor(Color.BLACK);
+    }
+    public void femaleClick(View view) {
+        radioFemale.setTextColor(Color.GREEN);
+        radioMale.setTextColor(Color.BLACK);
+        radioOther.setTextColor(Color.BLACK);
+    }
+    public void other(View view) {
+        radioMale.setTextColor(Color.BLACK);
+        radioFemale.setTextColor(Color.BLACK);
+        radioOther.setTextColor(Color.GREEN);
     }
 }

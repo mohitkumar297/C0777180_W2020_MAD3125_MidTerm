@@ -146,6 +146,7 @@
             android:id="@+id/radio"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+
             android:orientation="horizontal"
             android:layout_weight="2">
 
@@ -154,19 +155,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Male" />
+                android:text="Male"
+                android:textColor="#03DAC5"
+                android:onClick="maleClick"/>
 
             <RadioButton
                 android:id="@+id/radioFemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Female" />
+                android:text="Female"
+                android:onClick="femaleClick"/>
 
             <RadioButton
                 android:id="@+id/radioOther"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Other" />
+                android:text="Other"
+                android:onClick="other"/>
 
         </RadioGroup>
 
