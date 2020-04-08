@@ -82,80 +82,40 @@ public class PersonInformation implements Parcelable {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getTaxFilingDate() {
         return taxFilingDate;
     }
 
-    public void setTaxFilingDate(String taxFilingDate) {
-        this.taxFilingDate = taxFilingDate;
-    }
-
     public float getFederalTax() {
         return federalTax;
-    }
-
-    public void setFederalTax(float federalTax) {
-        this.federalTax = federalTax;
     }
 
     public float getProvincialTax() {
         return provincialTax;
     }
 
-    public void setProvincialTax(float provincialTax) {
-        this.provincialTax = provincialTax;
-    }
-
     public float getCPP() {
         return CPP;
-    }
-
-    public void setCPP(float CPP) {
-        this.CPP = CPP;
     }
 
     public float getEI() {
         return EI;
     }
 
-    public void setEI(float EI) {
-        this.EI = EI;
-    }
-
     public float getCarryForwardRRSP() {
         return carryForwardRRSP;
-    }
-
-    public void setCarryForwardRRSP(float carryForwardRRSP) {
-        this.carryForwardRRSP = carryForwardRRSP;
     }
 
     public float getTotalTaxableIncome() {
         return totalTaxableIncome;
     }
 
-    public void setTotalTaxableIncome(float totalTaxableIncome) {
-        this.totalTaxableIncome = totalTaxableIncome;
-    }
-
     public float getTotalTaxPayed() {
         return totalTaxPayed;
-    }
-
-    public void setTotalTaxPayed(float totalTaxPayed) {
-        this.totalTaxPayed = totalTaxPayed;
     }
 
     public PersonInformation(String sin, String firstName, String lastName, String dateOfBirth, String gender, float grossIncome, float RRSPContributed) {
