@@ -6,6 +6,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -32,7 +35,9 @@ public class DataDisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data_display);
         ButterKnife.inject(this);
 
-        
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
+        String today = sdf.format(new Date());
+        taxdate.setText(today);
         Intent i = getIntent();
         PersonInformation personInformation = i.getParcelableExtra("DATA");
 
