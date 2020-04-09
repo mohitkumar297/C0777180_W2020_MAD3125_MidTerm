@@ -115,6 +115,19 @@ public class PersonInformation implements Parcelable {
         return max-getRRSPContributed();
     }
 
+    public double getTotalTaxableIncome() {
+        double max = 0.0d;
+        max = getGrossIncome()*0.18;
+
+        if (max>getRRSPContributed()){
+        totalTaxableIncome = getGrossIncome()-(getEI()+getCPP()+getRRSPContributed());
+        return totalTaxableIncome;
+        }
+        else {
+        return getGrossIncome()-(getEI()+getCPP()+max);
+        }
+    }
+
     public double getFederalTax() {
         return federalTax;
     }
@@ -124,9 +137,7 @@ public class PersonInformation implements Parcelable {
     }
 
 
-    public double getTotalTaxableIncome() {
-        return totalTaxableIncome;
-    }
+
 
     public double getTotalTaxPayed() {
         return totalTaxPayed;
