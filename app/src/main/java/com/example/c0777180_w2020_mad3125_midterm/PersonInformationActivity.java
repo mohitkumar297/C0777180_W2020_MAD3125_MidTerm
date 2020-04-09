@@ -75,13 +75,13 @@ public class PersonInformationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person_information);
         ButterKnife.inject(this);
+
         int selectedRadio = radio.getCheckedRadioButtonId();
         radio1 = (RadioButton) findViewById(selectedRadio);
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
         String today = sdf.format(new Date());
         txtTaxFilingDate.setText(today);
-
 
         txtDOB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,28 +96,43 @@ public class PersonInformationActivity extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
+
+//        txtDOB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                calendar = Calendar.getInstance();
+//                year= calendar.get(Calendar.YEAR);
+//                month = calendar.get(Calendar.MONTH);
+//                dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+//                datePickerDialog = new DatePickerDialog(PersonInformationActivity.this, new DatePickerDialog.OnDateSetListener() {
+//                    @Override
+//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+//                        txtDOB.setText(dayOfMonth + "-" + month + "-" + year);
+//                    }
+//
+//                }, year,month,dayOfMonth );
+//                datePickerDialog.show();
+//            }
+//        });
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validateSIN()){
+                    String dob = txtDOB.getText().toString();
+                    float gi=Float.parseFloat(txtGrossIncome.getText().toString());
+                    float rc=Float.parseFloat(txtRRSPContributed.getText().toString());
+                    personInformation = new PersonInformation(txtSIN.getText().toString(),txtFirstName.getText().toString(),txtLastName.getText().toString(),dob,radio1.getText().toString(),gi,rc,age);
+
+                    Intent intent = new Intent(PersonInformationActivity.this,DataDisplayActivity.class);
+                    intent.putExtra("DATA",personInformation);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
-    private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
-        @Override
-        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-            Calendar c = Calendar.getInstance();
-            c.set(Calendar.YEAR, year);
-            c.set(Calendar.MONTH, month);
-            c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-            String format = new SimpleDateFormat("dd-MM-YYYY").format(c.getTime());
-            if (calculateAge(c.getTimeInMillis())<18){
-                inputLayoutDOB.setError("NOT ELIGIBLE");
-            }
-            else{
-            txtDOB.setText(format);
-            inputLayoutDOB.setError(null);
-            inputLayoutDOB.setErrorEnabled(false);}
-            //FOR AGE DISPLAY txtTaxFilingDate.setText(Integer.toString(calculateAge(c.getTimeInMillis())));
-        }
 
-
-    };
 
     public int calculateAge(long date) {
         Calendar dob = Calendar.getInstance();
@@ -130,28 +145,27 @@ public class PersonInformationActivity extends AppCompatActivity {
 
     }
 
-
-
-    @OnClick({R.id.btnSubmit, R.id.btnClear})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btnSubmit:
-                if (validateSIN()){
-                    float gi=Float.parseFloat(txtGrossIncome.getText().toString());
-                    float rc=Float.parseFloat(txtRRSPContributed.getText().toString());
-                    personInformation = new PersonInformation(txtSIN.getText().toString(),txtFirstName.getText().toString(),txtLastName.getText().toString(),txtDOB.getText().toString(),radio1.getText().toString(),gi,rc);
-
-                    Intent intent = new Intent(PersonInformationActivity.this,DataDisplayActivity.class);
-                    intent.putExtra("DATA",personInformation);
-                    startActivity(intent);
-                }
-                break;
-            case R.id.btnClear:
-                break;
+     DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
+        @Override
+        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+            Calendar c = Calendar.getInstance();
+            c.set(Calendar.YEAR, year);
+            c.set(Calendar.MONTH, month);
+            c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            String format = new SimpleDateFormat("dd-MM-YYYY").format(c.getTime());
+            if (calculateAge(c.getTimeInMillis())<18){
+                inputLayoutDOB.setError("NOT ELIGIBLE");
+            }
+            else{
+                txtDOB.setText(format);
+                inputLayoutDOB.setError(null);
+                inputLayoutDOB.setErrorEnabled(false);}
+            //FOR AGE DISPLAY txtTaxFilingDate.setText(Integer.toString(calculateAge(c.getTimeInMillis())));
         }
 
 
-    }
+    };
+
 
     public boolean validateSIN() {
         if (txtSIN.length() != 9) {
@@ -163,11 +177,6 @@ public class PersonInformationActivity extends AppCompatActivity {
         }
     }
 
-//    public void confirmInput() {
-//        if (!validateSIN()) {
-//            return;
-//        }
-//    }
 
     public void maleClick(View view) {
         radioMale.setTextColor(Color.GREEN);

@@ -79,7 +79,7 @@ public class PersonInformation implements Parcelable {
     }
 
     public String getFullName() {
-        return lastName.toUpperCase()+", "+firstName;
+        return lastName.toUpperCase()+", "+firstName.toLowerCase();
     }
 
     public int getAge() {
@@ -118,7 +118,7 @@ public class PersonInformation implements Parcelable {
         return totalTaxPayed;
     }
 
-    public PersonInformation(String sin, String firstName, String lastName, String dateOfBirth, String gender, float grossIncome, float RRSPContributed) {
+    public PersonInformation(String sin, String firstName, String lastName, String dateOfBirth, String gender, float grossIncome, float RRSPContributed,int age) {
         this.sin = sin;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -127,6 +127,7 @@ public class PersonInformation implements Parcelable {
         this.grossIncome = grossIncome;
         this.RRSPContributed = RRSPContributed;
         this.fullName = getFullName();
+        this.age = age;
     }
 
 

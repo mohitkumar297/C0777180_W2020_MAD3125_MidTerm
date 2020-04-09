@@ -32,6 +32,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data_display);
         ButterKnife.inject(this);
 
+        
         Intent i = getIntent();
         PersonInformation personInformation = i.getParcelableExtra("DATA");
 
@@ -39,7 +40,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         String b = personInformation.getFullName();
         String c = personInformation.getGender();
         int d = personInformation.getAge();
-        String e = personInformation.getTaxFilingDate();
+        String e = personInformation.getDateOfBirth();
         float f = personInformation.getGrossIncome();
         float g = personInformation.getRRSPContributed();
 
