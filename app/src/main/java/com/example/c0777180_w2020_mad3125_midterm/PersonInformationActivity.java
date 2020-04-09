@@ -126,7 +126,17 @@ public class PersonInformationActivity extends AppCompatActivity {
                 }}
             }
         });
-        btnClear.
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtSIN.setText("");
+                txtFirstName.setText("");
+                txtLastName.setText("");
+                txtDOB.setText("");
+                txtGrossIncome.setText("");
+                txtRRSPContributed.setText("");
+            }
+        });
     }
 
 
