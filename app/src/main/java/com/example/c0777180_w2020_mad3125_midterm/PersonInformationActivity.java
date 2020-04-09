@@ -27,6 +27,8 @@ import butterknife.OnClick;
 
 public class PersonInformationActivity extends AppCompatActivity {
 
+    PersonInformation personInformation;
+
     @InjectView(R.id.txtSIN)
     EditText txtSIN;
     @InjectView(R.id.txtFirstName)
@@ -45,6 +47,7 @@ public class PersonInformationActivity extends AppCompatActivity {
     TextInputEditText txtGrossIncome;
     @InjectView(R.id.txtRRSPContributed)
     TextInputEditText txtRRSPContributed;
+
     private RadioButton radio1;
 
     int year;
@@ -72,6 +75,8 @@ public class PersonInformationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person_information);
         ButterKnife.inject(this);
+        int selectedRadio = radio.getCheckedRadioButtonId();
+        radio1 = (RadioButton) findViewById(selectedRadio);
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
         String today = sdf.format(new Date());
@@ -125,12 +130,19 @@ public class PersonInformationActivity extends AppCompatActivity {
 
     }
 
+
+
     @OnClick({R.id.btnSubmit, R.id.btnClear})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btnSubmit:
                 if (validateSIN()){
+                    float gi=Float.parseFloat(txtGrossIncome.getText().toString());
+                    float rc=Float.parseFloat(txtRRSPContributed.getText().toString());
+                    personInformation = new PersonInformation(txtSIN.getText().toString(),txtFirstName.getText().toString(),txtLastName.getText().toString(),txtDOB.getText().toString(),radio1.getText().toString(),gi,rc);
+
                     Intent intent = new Intent(PersonInformationActivity.this,DataDisplayActivity.class);
+                    intent.putExtra("DATA",personInformation);
                     startActivity(intent);
                 }
                 break;
