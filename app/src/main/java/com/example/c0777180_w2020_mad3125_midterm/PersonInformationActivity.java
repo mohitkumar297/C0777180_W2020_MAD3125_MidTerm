@@ -120,8 +120,8 @@ public class PersonInformationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (validateSIN()){
                     String dob = txtDOB.getText().toString();
-                    float gi=Float.parseFloat(txtGrossIncome.getText().toString());
-                    float rc=Float.parseFloat(txtRRSPContributed.getText().toString());
+                    Double gi=Double.parseDouble(txtGrossIncome.getText().toString());
+                    Double rc=Double.parseDouble(txtRRSPContributed.getText().toString());
                     personInformation = new PersonInformation(txtSIN.getText().toString(),txtFirstName.getText().toString(),txtLastName.getText().toString(),dob,radio1.getText().toString(),gi,rc,age);
 
                     Intent intent = new Intent(PersonInformationActivity.this,DataDisplayActivity.class);

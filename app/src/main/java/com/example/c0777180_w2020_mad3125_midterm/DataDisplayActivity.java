@@ -63,8 +63,8 @@ public class DataDisplayActivity extends AppCompatActivity {
         gender.setText(c);
         dob.setText(e);
         taxdate.setText(today);
-        grossincome.setText(String.valueOf("$ " + f));
-        rrspcontributed.setText("$ " + g);
+        grossincome.setText("$ "+f);
+        rrspcontributed.setText(("$ " + g));
         age.setText("" + d);
         ccpcontribution.setText("$ " + j);
 

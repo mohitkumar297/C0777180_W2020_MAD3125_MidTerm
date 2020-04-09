@@ -128,7 +128,7 @@ public class PersonInformation implements Parcelable {
         return totalTaxPayed;
     }
 
-    public PersonInformation(String sin, String firstName, String lastName, String dateOfBirth, String gender, float grossIncome, float RRSPContributed,int age) {
+    public PersonInformation(String sin, String firstName, String lastName, String dateOfBirth, String gender, double grossIncome, double RRSPContributed,int age) {
         this.sin = sin;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -148,18 +148,18 @@ public class PersonInformation implements Parcelable {
         lastName = in.readString();
         dateOfBirth = in.readString();
         gender = in.readString();
-        grossIncome = in.readFloat();
-        RRSPContributed = in.readFloat();
+        grossIncome = in.readDouble();
+        RRSPContributed = in.readDouble();
         fullName = in.readString();
         age = in.readInt();
         taxFilingDate = in.readString();
-        federalTax = in.readFloat();
-        provincialTax = in.readFloat();
-        CPP = in.readFloat();
-        EI = in.readFloat();
-        carryForwardRRSP = in.readFloat();
-        totalTaxableIncome = in.readFloat();
-        totalTaxPayed = in.readFloat();
+        federalTax = in.readDouble();
+        provincialTax = in.readDouble();
+        CPP = in.readDouble();
+        EI = in.readDouble();
+        carryForwardRRSP = in.readDouble();
+        totalTaxableIncome = in.readDouble();
+        totalTaxPayed = in.readDouble();
     }
 
     public static final Creator<PersonInformation> CREATOR = new Creator<PersonInformation>() {

@@ -226,7 +226,7 @@
                 android:hint="Enter Gross Income"
                 android:drawablePadding="10dp"
                 android:drawableStart="@drawable/ic_attach_money_black_24dp"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -253,7 +253,7 @@
                 android:hint="Enter RRSP Contributed"
                 android:drawablePadding="10dp"
                 android:drawableStart="@drawable/ic_attach_money_black_24dp"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>

@@ -17,12 +17,15 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Social Insurance Number"
+        android:textColor="#000"
         android:textSize="20dp"/>
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="text2"
+        android:textColor="#000"
+        android:textSize="20dp"
         android:id="@+id/SIN"/>
     </LinearLayout>
 
@@ -37,12 +40,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Full Name"
+            android:textColor="#000"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
+            android:textColor="#000"
+            android:textSize="20dp"
             android:id="@+id/fullname"/>
     </LinearLayout>
 
@@ -56,12 +62,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Gender"
+            android:textColor="#000"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
+            android:textColor="#000"
+            android:textSize="20dp"
             android:id="@+id/gender"/>
     </LinearLayout>
 
@@ -75,12 +84,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Date of Birth"
+            android:textColor="#000"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
+            android:textColor="#000"
+            android:textSize="20dp"
             android:id="@+id/dob"/>
     </LinearLayout>
 
@@ -94,12 +106,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Age"
+            android:textColor="#000"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
+            android:textColor="#000"
+            android:textSize="20dp"
             android:id="@+id/age"/>
     </LinearLayout>
 
@@ -113,12 +128,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Tax Filing Date"
+            android:textColor="#000"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
+            android:textColor="#000"
+            android:textSize="20dp"
             android:id="@+id/taxdate"/>
     </LinearLayout>
 
@@ -132,12 +150,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Gross Income"
+            android:textColor="#000"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
+            android:textColor="#000"
+            android:textSize="20dp"
             android:id="@+id/grossincome"/>
     </LinearLayout>
 
@@ -151,12 +172,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RRSP Contributed"
+            android:textColor="#000"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
+            android:textColor="#000"
+            android:textSize="20dp"
             android:id="@+id/rrspcontributed"/>
     </LinearLayout>
 
@@ -170,12 +194,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="CCP Contribution"
+            android:textColor="#000"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
+            android:textColor="#000"
+            android:textSize="20dp"
             android:id="@+id/ccpcontribution"/>
 
     </LinearLayout>
@@ -198,6 +225,8 @@
             android:layout_weight="1"
             android:text="text2"
             android:textColor="#000"
+            android:textSize="20dp"
+
             android:id="@+id/employmentinsurance"/>
 
     </LinearLayout>
