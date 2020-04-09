@@ -79,7 +79,7 @@ public class PersonInformation implements Parcelable {
     }
 
     public String getFullName() {
-        return fullName;
+        return lastName.toUpperCase()+", "+firstName;
     }
 
     public int getAge() {
@@ -126,6 +126,7 @@ public class PersonInformation implements Parcelable {
         this.gender = gender;
         this.grossIncome = grossIncome;
         this.RRSPContributed = RRSPContributed;
+        this.fullName = getFullName();
     }
 
 
