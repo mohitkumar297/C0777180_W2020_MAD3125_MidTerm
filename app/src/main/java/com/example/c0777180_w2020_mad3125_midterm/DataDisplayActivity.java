@@ -1,6 +1,7 @@
 package com.example.c0777180_w2020_mad3125_midterm;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -59,7 +60,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         String h = personInformation.getTaxFilingDate();
         double j = personInformation.getCPP();
         double k = personInformation.getEI();
-        //double l = personInformation.ge
+        double l = personInformation.getCarryForwardRRSP();
 
 
         SIN.setText(a);
@@ -72,6 +73,13 @@ public class DataDisplayActivity extends AppCompatActivity {
         age.setText("" + d);
         ccpcontribution.setText("$ " + j);
         employmentinsurance.setText("$ " + k);
+        if (l>0){
+            carryforward.setText("$ "+ l);
+        }
+        else {
+            carryforward.setText("$ "+ l);
+            carryforward.setTextColor(Color.RED);
+        }
 
     }
 }
