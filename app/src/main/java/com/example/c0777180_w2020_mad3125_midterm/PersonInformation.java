@@ -107,6 +107,13 @@ public class PersonInformation implements Parcelable {
         }
 
     }
+    public double getCarryForwardRRSP() {
+
+        double max = 0.0d;
+        max = getGrossIncome()*0.18;
+
+        return max-getRRSPContributed();
+    }
 
     public double getFederalTax() {
         return federalTax;
@@ -116,9 +123,6 @@ public class PersonInformation implements Parcelable {
         return provincialTax;
     }
 
-    public double getCarryForwardRRSP() {
-        return carryForwardRRSP;
-    }
 
     public double getTotalTaxableIncome() {
         return totalTaxableIncome;
@@ -139,6 +143,8 @@ public class PersonInformation implements Parcelable {
         this.fullName = getFullName();
         this.age = age;
         this.CPP = getCPP();
+        this.EI = getEI();
+        this.carryForwardRRSP = getCarryForwardRRSP();
     }
 
 
