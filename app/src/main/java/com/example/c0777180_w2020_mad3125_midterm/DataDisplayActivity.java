@@ -56,6 +56,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         double g = personInformation.getRRSPContributed();
         String h = personInformation.getTaxFilingDate();
         double j = personInformation.getCPP();
+        double k = personInformation.getEI();
 
 
         SIN.setText(a);
@@ -67,6 +68,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         rrspcontributed.setText(("$ " + g));
         age.setText("" + d);
         ccpcontribution.setText("$ " + j);
+        employmentinsurance.setText("$ "+k);
 
     }
 }
