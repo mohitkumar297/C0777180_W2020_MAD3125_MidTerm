@@ -63,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="First Name"
+            android:textColor="#fff"
             android:drawablePadding="10dp"
             android:drawableStart="@drawable/ic_person_black_24dp"
             android:inputType="textPersonName"
@@ -86,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="Last Name"
+                android:textColor="#fff"
                 android:drawablePadding="10dp"
                 android:drawableStart="@drawable/ic_person_black_24dp"
                 android:inputType="textPersonName"
@@ -115,7 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="      Date Of Birth"
-
+                android:textColor="#fff"
                 android:drawableEnd="@drawable/ic_date_range_black_24dp"
                 android:id="@+id/txtDOB"
                 android:focusable="false"
@@ -139,7 +141,7 @@
             android:text="Gender"
             android:textAlignment="center"
             android:textSize="20dp"
-            android:textColor="#000"/>
+            android:textColor="#fff"/>
 
 
         <RadioGroup
@@ -191,16 +193,17 @@
             android:text="Tax Filing Date"
             android:textAlignment="center"
             android:textSize="20dp"
-            android:textColor="#000"/>
+            android:textColor="#fff"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Date Here"
+            android:textColor="#fff"
             android:textAlignment="center"
             android:textSize="20dp"
-            android:textColor="#000"
+
             android:id="@+id/txtTaxFilingDate"/>
     </LinearLayout>
 
@@ -224,6 +227,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Gross Income"
+                android:textColor="#fff"
                 android:drawablePadding="10dp"
                 android:drawableStart="@drawable/ic_attach_money_black_24dp"
                 android:inputType="number"
