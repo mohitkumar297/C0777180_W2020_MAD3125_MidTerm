@@ -152,7 +152,25 @@ public class PersonInformation implements Parcelable {
     }
 
     public double getProvincialTax() {
-        return provincialTax;
+
+        if (getTotalTaxableIncome()<10582){
+            return 0;
+        }
+        else if ((getTotalTaxableIncome()>10582.01)&&(getTotalTaxableIncome()<43906)) {
+            return getTotalTaxableIncome()*0.0505;
+        }
+        else if ((getTotalTaxableIncome()>43906.01)&&(getTotalTaxableIncome()<87813)) {
+            return getTotalTaxableIncome()*0.0915;
+        }
+        else if ((getTotalTaxableIncome()>87813.01)&&(getTotalTaxableIncome()<150000)) {
+            return getTotalTaxableIncome()*0.1116;
+        }
+        else if ((getTotalTaxableIncome()>150000.01)&&(getTotalTaxableIncome()<220000)) {
+            return getTotalTaxableIncome()*0.1216;
+        }
+        else{
+            return getTotalTaxableIncome()*0.1316;
+        }
     }
 
 
@@ -176,6 +194,7 @@ public class PersonInformation implements Parcelable {
         this.EI = getEI();
         this.carryForwardRRSP = getCarryForwardRRSP();
         this.federalTax = getFederalTax();
+        this.provincialTax = getProvincialTax();
     }
 
 
