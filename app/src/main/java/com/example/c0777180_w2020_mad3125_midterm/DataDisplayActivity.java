@@ -53,7 +53,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         float f = personInformation.getGrossIncome();
         float g = personInformation.getRRSPContributed();
         String h = personInformation.getTaxFilingDate();
-        String i = personInformation.getCPP();
+        float j = personInformation.getCPP();
 
         SIN.setText(a);
         fullname.setText(b);
@@ -63,7 +63,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         grossincome.setText(String.valueOf("$ " + f));
         rrspcontributed.setText("$ " + g);
         age.setText("" + d);
-        ccp
+        ccpcontribution.setText("$ " + j);
 
     }
 }

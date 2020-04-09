@@ -90,26 +90,30 @@ public class PersonInformation implements Parcelable {
         return taxFilingDate;
     }
 
+    public float getCPP() {
+        if (getGrossIncome()>57400){
+            return (float) 2927.40;
+        }
+        else{
+            return (float) (getGrossIncome()*0.051);
+        }
+    }
+    public float getEI() {
+        if (getGrossIncome()>53100){
+            return (float) 860.22;
+        }
+        else {
+            return (float) (getGrossIncome()*0.0162);
+        }
+
+    }
+
     public float getFederalTax() {
         return federalTax;
     }
 
     public float getProvincialTax() {
         return provincialTax;
-    }
-
-    public float getCPP() {
-        return CPP;
-    }
-
-    public float getEI() {
-        if (grossIncome>57400){
-            return (float) 2927.40;
-        }
-        else{
-            return (float) (grossIncome*0.051);
-        }
-
     }
 
     public float getCarryForwardRRSP() {
