@@ -4,7 +4,10 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -115,6 +118,11 @@ public class PersonInformationActivity extends AppCompatActivity {
                     if (txtFirstName.getText().toString().length()==0||txtLastName.getText().toString().length()==0||dob.length()==0||txtGrossIncome.getText().toString().length()==0||txtRRSPContributed.getText().toString().length()==0){
                         Toast.makeText(PersonInformationActivity.this,"COMPLETE THE FORM",Toast.LENGTH_SHORT).show();
                     }
+                    else if (age <18){
+
+                        btnSubmit.setTextColor(Color.RED);
+                        showToast();
+                    }
                     else{
                     Double gi=Double.parseDouble(txtGrossIncome.getText().toString());
                     Double rc=Double.parseDouble(txtRRSPContributed.getText().toString());
@@ -149,7 +157,7 @@ public class PersonInformationActivity extends AppCompatActivity {
 
         Calendar today = Calendar.getInstance();
 
-        age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+        age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR)-1;
         return age;
 
     }
@@ -163,6 +171,7 @@ public class PersonInformationActivity extends AppCompatActivity {
             c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             String format = new SimpleDateFormat("dd-MM-YYYY").format(c.getTime());
             if (calculateAge(c.getTimeInMillis())<18){
+                txtDOB.setText(format);
                 inputLayoutDOB.setError("NOT ELIGIBLE");
             }
             else{
@@ -201,5 +210,14 @@ public class PersonInformationActivity extends AppCompatActivity {
         radioMale.setTextColor(Color.WHITE);
         radioFemale.setTextColor(Color.WHITE);
         radioOther.setTextColor(Color.GREEN);
+    }
+    public void showToast(){
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View layout = layoutInflater.inflate(R.layout.toast_layout,(ViewGroup) findViewById(R.id.toast_root));
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER,0,0);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
     }
 }
