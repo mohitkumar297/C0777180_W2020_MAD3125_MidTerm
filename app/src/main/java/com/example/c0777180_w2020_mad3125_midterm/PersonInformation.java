@@ -129,7 +129,26 @@ public class PersonInformation implements Parcelable {
     }
 
     public double getFederalTax() {
-        return federalTax;
+
+        if (getTotalTaxableIncome()<12069){
+            return 0;
+        }
+        else if ((getTotalTaxableIncome()>12069.01)&&(getTotalTaxableIncome()<47630)) {
+            return getTotalTaxableIncome()*0.15;
+        }
+        else if ((getTotalTaxableIncome()>47630.01)&&(getTotalTaxableIncome()<95259)) {
+            return getTotalTaxableIncome()*0.205;
+        }
+        else if ((getTotalTaxableIncome()>95259.01)&&(getTotalTaxableIncome()<147667)) {
+            return getTotalTaxableIncome()*0.26;
+        }
+        else if ((getTotalTaxableIncome()>147667.01)&&(getTotalTaxableIncome()<210371)) {
+            return getTotalTaxableIncome()*0.29;
+        }
+        else{
+            return getTotalTaxableIncome()*0.33;
+        }
+
     }
 
     public double getProvincialTax() {
