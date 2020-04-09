@@ -173,11 +173,9 @@ public class PersonInformation implements Parcelable {
         }
     }
 
-
-
-
     public double getTotalTaxPayed() {
-        return totalTaxPayed;
+
+        return getFederalTax()+getProvincialTax();
     }
 
     public PersonInformation(String sin, String firstName, String lastName, String dateOfBirth, String gender, double grossIncome, double RRSPContributed,int age) {
@@ -195,6 +193,7 @@ public class PersonInformation implements Parcelable {
         this.carryForwardRRSP = getCarryForwardRRSP();
         this.federalTax = getFederalTax();
         this.provincialTax = getProvincialTax();
+        this.totalTaxPayed = getTotalTaxPayed();
     }
 
 

@@ -43,6 +43,8 @@ public class DataDisplayActivity extends AppCompatActivity {
     TextView federaltax;
     @InjectView(R.id.provincialtax)
     TextView provincialtax;
+    @InjectView(R.id.totaltaxpayed)
+    TextView totaltaxpayed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +72,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         double m = personInformation.getTotalTaxableIncome();
         double n = personInformation.getFederalTax();
         double o = personInformation.getProvincialTax();
+        double p = personInformation.getTotalTaxPayed();
 
 
         SIN.setText(a);
@@ -90,8 +93,8 @@ public class DataDisplayActivity extends AppCompatActivity {
         }
         taxableincome.setText("$ " + m);
         federaltax.setText("$ " + n);
-        provincialtax.setText("$ "+o);
-
+        provincialtax.setText("$ " + o);
+        totaltaxpayed.setText("$ "+p);
 
     }
 }
