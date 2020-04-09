@@ -39,6 +39,8 @@ public class DataDisplayActivity extends AppCompatActivity {
     TextView carryforward;
     @InjectView(R.id.taxableincome)
     TextView taxableincome;
+    @InjectView(R.id.federaltax)
+    TextView federaltax;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         double k = personInformation.getEI();
         double l = personInformation.getCarryForwardRRSP();
         double m = personInformation.getTotalTaxableIncome();
+        double n = personInformation.getFederalTax();
 
 
         SIN.setText(a);
@@ -82,8 +85,7 @@ public class DataDisplayActivity extends AppCompatActivity {
             carryforward.setText("$ " + l);
             carryforward.setTextColor(Color.RED);
         }
-        taxableincome.setText("$ "+ m);
-
+        taxableincome.setText("$ " + m);
 
 
     }

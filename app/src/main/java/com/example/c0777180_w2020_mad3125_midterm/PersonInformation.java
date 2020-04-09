@@ -175,6 +175,7 @@ public class PersonInformation implements Parcelable {
         this.CPP = getCPP();
         this.EI = getEI();
         this.carryForwardRRSP = getCarryForwardRRSP();
+        this.federalTax = getFederalTax();
     }
 
 
