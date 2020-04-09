@@ -28,6 +28,8 @@ public class DataDisplayActivity extends AppCompatActivity {
     TextView grossincome;
     @InjectView(R.id.rrspcontributed)
     TextView rrspcontributed;
+    @InjectView(R.id.dob)
+    TextView dob;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,7 @@ public class DataDisplayActivity extends AppCompatActivity {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
         String today = sdf.format(new Date());
-        taxdate.setText(today);
+
         Intent i = getIntent();
         PersonInformation personInformation = i.getParcelableExtra("DATA");
 
@@ -48,13 +50,17 @@ public class DataDisplayActivity extends AppCompatActivity {
         String e = personInformation.getDateOfBirth();
         float f = personInformation.getGrossIncome();
         float g = personInformation.getRRSPContributed();
+        String h = personInformation.getTaxFilingDate();
 
         SIN.setText(a);
         fullname.setText(b);
         gender.setText(c);
-        taxdate.setText(e);
-        grossincome.setText(String.valueOf("$ "+ f));
-        rrspcontributed.setText("$ "+ g);
+        dob.setText(e);
+        taxdate.setText(today);
+        grossincome.setText(String.valueOf("$ " + f));
+        rrspcontributed.setText("$ " + g);
+        age.setText("" + d);
+
 
     }
 }
