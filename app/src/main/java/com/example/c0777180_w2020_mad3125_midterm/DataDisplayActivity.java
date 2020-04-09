@@ -52,10 +52,11 @@ public class DataDisplayActivity extends AppCompatActivity {
         String c = personInformation.getGender();
         int d = personInformation.getAge();
         String e = personInformation.getDateOfBirth();
-        float f = personInformation.getGrossIncome();
-        float g = personInformation.getRRSPContributed();
+        double f = personInformation.getGrossIncome();
+        double g = personInformation.getRRSPContributed();
         String h = personInformation.getTaxFilingDate();
-        float j = personInformation.getCPP();
+        double j = personInformation.getCPP();
+
 
         SIN.setText(a);
         fullname.setText(b);

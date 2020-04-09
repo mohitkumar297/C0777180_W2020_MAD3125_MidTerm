@@ -9,18 +9,18 @@ public class PersonInformation implements Parcelable {
     private String lastName;
     private String dateOfBirth;
     private String gender;
-    private float grossIncome;
-    private float RRSPContributed;
+    private double grossIncome;
+    private double RRSPContributed;
     private String fullName;
     private int age;
     private String taxFilingDate;
-    private float federalTax;
-    private float provincialTax;
-    private float CPP;
-    private float EI;
-    private float carryForwardRRSP;
-    private float totalTaxableIncome;
-    private float totalTaxPayed;
+    private double federalTax;
+    private double provincialTax;
+    private double CPP;
+    private double EI;
+    private double carryForwardRRSP;
+    private double totalTaxableIncome;
+    private double totalTaxPayed;
 
     public String getSin() {
         return sin;
@@ -62,7 +62,7 @@ public class PersonInformation implements Parcelable {
         this.gender = gender;
     }
 
-    public float getGrossIncome() {
+    public double getGrossIncome() {
         return grossIncome;
     }
 
@@ -70,7 +70,7 @@ public class PersonInformation implements Parcelable {
         this.grossIncome = grossIncome;
     }
 
-    public float getRRSPContributed() {
+    public double getRRSPContributed() {
         return RRSPContributed;
     }
 
@@ -90,41 +90,41 @@ public class PersonInformation implements Parcelable {
         return taxFilingDate;
     }
 
-    public float getCPP() {
+    public double getCPP() {
         if (getGrossIncome()>57400){
-            return (float) 2927.40;
+            return 2927.40;
         }
         else{
-            return (float) (getGrossIncome()*0.051);
+            return (getGrossIncome()*0.051);
         }
     }
-    public float getEI() {
+    public double getEI() {
         if (getGrossIncome()>53100){
-            return (float) 860.22;
+            return 860.22;
         }
         else {
-            return (float) (getGrossIncome()*0.0162);
+            return (getGrossIncome()*0.0162);
         }
 
     }
 
-    public float getFederalTax() {
+    public double getFederalTax() {
         return federalTax;
     }
 
-    public float getProvincialTax() {
+    public double getProvincialTax() {
         return provincialTax;
     }
 
-    public float getCarryForwardRRSP() {
+    public double getCarryForwardRRSP() {
         return carryForwardRRSP;
     }
 
-    public float getTotalTaxableIncome() {
+    public double getTotalTaxableIncome() {
         return totalTaxableIncome;
     }
 
-    public float getTotalTaxPayed() {
+    public double getTotalTaxPayed() {
         return totalTaxPayed;
     }
 
@@ -186,17 +186,17 @@ public class PersonInformation implements Parcelable {
         dest.writeString(lastName);
         dest.writeString(dateOfBirth);
         dest.writeString(gender);
-        dest.writeFloat(grossIncome);
-        dest.writeFloat(RRSPContributed);
+        dest.writeDouble(grossIncome);
+        dest.writeDouble(RRSPContributed);
         dest.writeString(fullName);
         dest.writeInt(age);
         dest.writeString(taxFilingDate);
-        dest.writeFloat(federalTax);
-        dest.writeFloat(provincialTax);
-        dest.writeFloat(CPP);
-        dest.writeFloat(EI);
-        dest.writeFloat(carryForwardRRSP);
-        dest.writeFloat(totalTaxableIncome);
-        dest.writeFloat(totalTaxPayed);
+        dest.writeDouble(federalTax);
+        dest.writeDouble(provincialTax);
+        dest.writeDouble(CPP);
+        dest.writeDouble(EI);
+        dest.writeDouble(carryForwardRRSP);
+        dest.writeDouble(totalTaxableIncome);
+        dest.writeDouble(totalTaxPayed);
     }
 }
