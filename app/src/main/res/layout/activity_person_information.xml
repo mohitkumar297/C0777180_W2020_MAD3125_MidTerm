@@ -223,7 +223,7 @@
             android:layout_marginLeft="10dp"
             android:textColorHint="@color/form_details_medium"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -250,7 +250,7 @@
             android:layout_marginLeft="10dp"
             android:textColorHint="@color/form_details_medium"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText

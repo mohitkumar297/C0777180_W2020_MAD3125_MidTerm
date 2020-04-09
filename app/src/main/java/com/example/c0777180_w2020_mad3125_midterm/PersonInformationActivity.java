@@ -135,6 +135,8 @@ public class PersonInformationActivity extends AppCompatActivity {
                 txtDOB.setText("");
                 txtGrossIncome.setText("");
                 txtRRSPContributed.setText("");
+                inputLayoutSIN.setError(null);
+                inputLayoutDOB.setError(null);
             }
         });
     }
