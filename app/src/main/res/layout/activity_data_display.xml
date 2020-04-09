@@ -8,27 +8,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#568ea6">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Social Insurance Number"
-        android:textColor="#000"
-        android:textSize="20dp"/>
+        android:textColor="#fff"
+        android:textSize="16dp"/>
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="text2"
-        android:textColor="#000"
-        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        android:textSize="16dp"
         android:id="@+id/SIN"/>
     </LinearLayout>
 
@@ -37,21 +43,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Full Name"
-            android:textColor="#000"
-            android:textSize="20dp"/>
+            android:textColor="#fff"
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/fullname"/>
     </LinearLayout>
 
@@ -59,21 +70,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Gender"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/gender"/>
     </LinearLayout>
 
@@ -81,21 +97,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Date of Birth"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/dob"/>
     </LinearLayout>
 
@@ -103,21 +124,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Age"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/age"/>
     </LinearLayout>
 
@@ -125,21 +151,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Tax Filing Date"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/taxdate"/>
     </LinearLayout>
 
@@ -147,21 +178,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Gross Income"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/grossincome"/>
     </LinearLayout>
 
@@ -169,21 +205,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RRSP Contributed"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/rrspcontributed"/>
     </LinearLayout>
 
@@ -191,21 +232,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="CCP Contribution"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/ccpcontribution"/>
 
     </LinearLayout>
@@ -214,22 +260,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Employment Insurance"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
-
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/employmentinsurance"/>
 
     </LinearLayout>
@@ -238,13 +288,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Carry Forward RRSP"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
@@ -252,8 +306,8 @@
             android:layout_weight="1"
             android:text="text2"
             android:textColor="#000"
-            android:textSize="20dp"
-
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/carryforward"/>
 
     </LinearLayout>
@@ -262,22 +316,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Total taxable Income"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
-            android:textSize="20dp"
-
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="16dp"
             android:id="@+id/taxableincome"/>
 
     </LinearLayout>
@@ -286,22 +344,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:background="#305f72">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Federal Tax"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:textSize="20dp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="text2"
-                android:textColor="#000"
-                android:textSize="20dp"
-
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="16dp"
                 android:id="@+id/federaltax"/>
 
         </LinearLayout>
@@ -310,22 +372,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:background="#305f72">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Provincial Tax"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:textSize="20dp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="text2"
-                android:textColor="#000"
-                android:textSize="20dp"
-
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="16dp"
                 android:id="@+id/provincialtax"/>
 
         </LinearLayout>
@@ -334,22 +400,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:background="#305f72">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Total Tax Payed"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:textSize="20dp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="text2"
-                android:textColor="#000"
-                android:textSize="20dp"
-
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="16dp"
                 android:id="@+id/totaltaxpayed"/>
 
         </LinearLayout>
