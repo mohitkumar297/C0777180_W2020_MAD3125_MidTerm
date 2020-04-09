@@ -16,8 +16,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
     <TextView
@@ -44,8 +44,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -71,8 +71,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -81,7 +81,7 @@
             android:layout_weight="1"
             android:text="Gender"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -98,8 +98,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -108,7 +108,7 @@
             android:layout_weight="1"
             android:text="Date of Birth"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -125,8 +125,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -135,7 +135,7 @@
             android:layout_weight="1"
             android:text="Age"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -152,8 +152,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -162,7 +162,7 @@
             android:layout_weight="1"
             android:text="Tax Filing Date"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -179,8 +179,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -189,7 +189,7 @@
             android:layout_weight="1"
             android:text="Gross Income"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -206,8 +206,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -216,7 +216,7 @@
             android:layout_weight="1"
             android:text="RRSP Contributed"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -233,8 +233,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -243,7 +243,7 @@
             android:layout_weight="1"
             android:text="CCP Contribution"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -261,8 +261,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -271,7 +271,7 @@
             android:layout_weight="1"
             android:text="Employment Insurance"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -289,8 +289,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
@@ -299,13 +299,13 @@
             android:layout_weight="1"
             android:text="Carry Forward RRSP"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="text2"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textAlignment="center"
             android:textSize="16dp"
             android:id="@+id/carryforward"/>
@@ -317,17 +317,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:padding="10dp"
         android:background="#305f72">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Total taxable Income"
+            android:text="Total Taxable Income"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -345,8 +345,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:padding="10dp"
             android:background="#305f72">
             <TextView
@@ -355,7 +355,7 @@
                 android:layout_weight="1"
                 android:text="Federal Tax"
                 android:textColor="#fff"
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -373,8 +373,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:padding="10dp"
             android:background="#305f72">
             <TextView
@@ -383,7 +383,7 @@
                 android:layout_weight="1"
                 android:text="Provincial Tax"
                 android:textColor="#fff"
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -401,8 +401,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginBottom="20dp"
             android:padding="10dp"
             android:background="#305f72">
@@ -412,7 +412,7 @@
                 android:layout_weight="1"
                 android:text="Total Tax Payed"
                 android:textColor="#fff"
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -424,9 +424,6 @@
                 android:id="@+id/totaltaxpayed"/>
 
         </LinearLayout>
-
-
-
 
 </LinearLayout>
 

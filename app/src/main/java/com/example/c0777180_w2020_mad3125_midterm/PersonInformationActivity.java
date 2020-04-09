@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -69,19 +70,27 @@ public class PersonInformationActivity extends AppCompatActivity {
     TextInputLayout inputLayoutSIN;
     @InjectView(R.id.inputLayoutDOB)
     TextInputLayout inputLayoutDOB;
+    String checkedBox = "";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person_information);
         ButterKnife.inject(this);
 
-        int selectedRadio = radio.getCheckedRadioButtonId();
-        radio1 = (RadioButton) findViewById(selectedRadio);
-
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
         String today = sdf.format(new Date());
         txtTaxFilingDate.setText(today);
+
+        radio.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                int checkedRadio = radio.getCheckedRadioButtonId();
+                RadioButton checkedRadioButton = findViewById(checkedRadio);
+                checkedBox = checkedRadioButton.getText().toString();
+            }
+        });
+
 
         txtDOB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,39 +106,27 @@ public class PersonInformationActivity extends AppCompatActivity {
             }
         });
 
-//        txtDOB.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                calendar = Calendar.getInstance();
-//                year= calendar.get(Calendar.YEAR);
-//                month = calendar.get(Calendar.MONTH);
-//                dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
-//                datePickerDialog = new DatePickerDialog(PersonInformationActivity.this, new DatePickerDialog.OnDateSetListener() {
-//                    @Override
-//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//                        txtDOB.setText(dayOfMonth + "-" + month + "-" + year);
-//                    }
-//
-//                }, year,month,dayOfMonth );
-//                datePickerDialog.show();
-//            }
-//        });
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (validateSIN()){
                     String dob = txtDOB.getText().toString();
+                    if (txtFirstName.getText().toString().length()==0||txtLastName.getText().toString().length()==0||dob.length()==0||txtGrossIncome.getText().toString().length()==0||txtRRSPContributed.getText().toString().length()==0){
+                        Toast.makeText(PersonInformationActivity.this,"COMPLETE THE FORM",Toast.LENGTH_SHORT).show();
+                    }
+                    else{
                     Double gi=Double.parseDouble(txtGrossIncome.getText().toString());
                     Double rc=Double.parseDouble(txtRRSPContributed.getText().toString());
-                    personInformation = new PersonInformation(txtSIN.getText().toString(),txtFirstName.getText().toString(),txtLastName.getText().toString(),dob,radio1.getText().toString(),gi,rc,age);
+                    personInformation = new PersonInformation(txtSIN.getText().toString(),txtFirstName.getText().toString(),txtLastName.getText().toString(),dob, checkedBox,gi,rc,age);
 
                     Intent intent = new Intent(PersonInformationActivity.this,DataDisplayActivity.class);
                     intent.putExtra("DATA",personInformation);
                     startActivity(intent);
-                }
+                }}
             }
         });
+        btnClear.
     }
 
 
@@ -180,17 +177,17 @@ public class PersonInformationActivity extends AppCompatActivity {
 
     public void maleClick(View view) {
         radioMale.setTextColor(Color.GREEN);
-        radioFemale.setTextColor(Color.BLACK);
-        radioOther.setTextColor(Color.BLACK);
+        radioFemale.setTextColor(Color.WHITE);
+        radioOther.setTextColor(Color.WHITE);
     }
     public void femaleClick(View view) {
         radioFemale.setTextColor(Color.GREEN);
-        radioMale.setTextColor(Color.BLACK);
-        radioOther.setTextColor(Color.BLACK);
+        radioMale.setTextColor(Color.WHITE);
+        radioOther.setTextColor(Color.WHITE);
     }
     public void other(View view) {
-        radioMale.setTextColor(Color.BLACK);
-        radioFemale.setTextColor(Color.BLACK);
+        radioMale.setTextColor(Color.WHITE);
+        radioFemale.setTextColor(Color.WHITE);
         radioOther.setTextColor(Color.GREEN);
     }
 }

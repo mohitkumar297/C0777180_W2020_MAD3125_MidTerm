@@ -134,19 +134,19 @@ public class PersonInformation implements Parcelable {
 
     public double getFederalTax() {
 
-        if (getTotalTaxableIncome()<12069){
+        if (getTotalTaxableIncome()<=12069){
             return 0;
         }
-        else if ((getTotalTaxableIncome()>12069.01)&&(getTotalTaxableIncome()<47630)) {
+        else if ((getTotalTaxableIncome()>12069.01)&&(getTotalTaxableIncome()<=47630)) {
             return getTotalTaxableIncome()*0.15;
         }
-        else if ((getTotalTaxableIncome()>47630.01)&&(getTotalTaxableIncome()<95259)) {
+        else if ((getTotalTaxableIncome()>47630.01)&&(getTotalTaxableIncome()<=95259)) {
             return getTotalTaxableIncome()*0.205;
         }
-        else if ((getTotalTaxableIncome()>95259.01)&&(getTotalTaxableIncome()<147667)) {
+        else if ((getTotalTaxableIncome()>95259.01)&&(getTotalTaxableIncome()<=147667)) {
             return getTotalTaxableIncome()*0.26;
         }
-        else if ((getTotalTaxableIncome()>147667.01)&&(getTotalTaxableIncome()<210371)) {
+        else if ((getTotalTaxableIncome()>147667.01)&&(getTotalTaxableIncome()<=210371)) {
             return getTotalTaxableIncome()*0.29;
         }
         else{
@@ -157,19 +157,19 @@ public class PersonInformation implements Parcelable {
 
     public double getProvincialTax() {
 
-        if (getTotalTaxableIncome()<10582){
+        if (getTotalTaxableIncome()<=10582){
             return 0;
         }
-        else if ((getTotalTaxableIncome()>10582.01)&&(getTotalTaxableIncome()<43906)) {
+        else if ((getTotalTaxableIncome()>10582.01)&&(getTotalTaxableIncome()<=43906)) {
             return getTotalTaxableIncome()*0.0505;
         }
-        else if ((getTotalTaxableIncome()>43906.01)&&(getTotalTaxableIncome()<87813)) {
+        else if ((getTotalTaxableIncome()>43906.01)&&(getTotalTaxableIncome()<=87813)) {
             return getTotalTaxableIncome()*0.0915;
         }
-        else if ((getTotalTaxableIncome()>87813.01)&&(getTotalTaxableIncome()<150000)) {
+        else if ((getTotalTaxableIncome()>87813.01)&&(getTotalTaxableIncome()<=150000)) {
             return getTotalTaxableIncome()*0.1116;
         }
-        else if ((getTotalTaxableIncome()>150000.01)&&(getTotalTaxableIncome()<220000)) {
+        else if ((getTotalTaxableIncome()>150000.01)&&(getTotalTaxableIncome()<=220000)) {
             return getTotalTaxableIncome()*0.1216;
         }
         else{
