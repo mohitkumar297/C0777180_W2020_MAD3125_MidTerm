@@ -30,6 +30,8 @@ public class DataDisplayActivity extends AppCompatActivity {
     TextView rrspcontributed;
     @InjectView(R.id.dob)
     TextView dob;
+    @InjectView(R.id.ccpcontribution)
+    TextView ccpcontribution;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         float f = personInformation.getGrossIncome();
         float g = personInformation.getRRSPContributed();
         String h = personInformation.getTaxFilingDate();
+        String i = personInformation.getCPP();
 
         SIN.setText(a);
         fullname.setText(b);
@@ -60,7 +63,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         grossincome.setText(String.valueOf("$ " + f));
         rrspcontributed.setText("$ " + g);
         age.setText("" + d);
-
+        ccp
 
     }
 }

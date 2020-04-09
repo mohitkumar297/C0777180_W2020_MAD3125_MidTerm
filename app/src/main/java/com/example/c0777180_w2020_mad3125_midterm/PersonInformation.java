@@ -103,7 +103,13 @@ public class PersonInformation implements Parcelable {
     }
 
     public float getEI() {
-        return EI;
+        if (grossIncome>57400){
+            return (float) 2927.40;
+        }
+        else{
+            return (float) (grossIncome*0.051);
+        }
+
     }
 
     public float getCarryForwardRRSP() {
@@ -128,6 +134,7 @@ public class PersonInformation implements Parcelable {
         this.RRSPContributed = RRSPContributed;
         this.fullName = getFullName();
         this.age = age;
+        this.CPP = getCPP();
     }
 
 
