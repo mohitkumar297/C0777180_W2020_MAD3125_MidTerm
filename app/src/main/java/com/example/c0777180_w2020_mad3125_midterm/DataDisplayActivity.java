@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -80,21 +81,21 @@ public class DataDisplayActivity extends AppCompatActivity {
         gender.setText(c);
         dob.setText(e);
         taxdate.setText(today);
-        grossincome.setText("$ " + f);
-        rrspcontributed.setText(("$ " + g));
+        grossincome.setText("$ " + String.format("%.2f", f));
+        rrspcontributed.setText("$ " + String.format("%.2f", g));
         age.setText("" + d);
-        ccpcontribution.setText("$ " + j);
-        employmentinsurance.setText("$ " + k);
+        ccpcontribution.setText("$ " + String.format("%.2f", j));
+        employmentinsurance.setText("$ " + String.format("%.2f", k));
         if (l > 0) {
-            carryforward.setText("$ " + l);
+            carryforward.setText("$ " + String.format("%.2f", l));
         } else {
-            carryforward.setText("$ " + l);
+            carryforward.setText("$ " + String.format("%.2f", l));
             carryforward.setTextColor(Color.RED);
         }
-        taxableincome.setText("$ " + m);
-        federaltax.setText("$ " + n);
-        provincialtax.setText("$ " + o);
-        totaltaxpayed.setText("$ "+p);
+        taxableincome.setText("$ " + String.format("%.2f", m));
+        federaltax.setText("$ " + String.format("%.2f", n));
+        provincialtax.setText("$ " + String.format("%.2f", o));
+        totaltaxpayed.setText("$ "+String.format("%.2f", p));
 
     }
 }

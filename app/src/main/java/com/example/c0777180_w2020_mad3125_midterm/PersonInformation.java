@@ -3,6 +3,8 @@ package com.example.c0777180_w2020_mad3125_midterm;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.text.DecimalFormat;
+
 public class PersonInformation implements Parcelable {
     private String sin;
     private String firstName;
@@ -21,6 +23,8 @@ public class PersonInformation implements Parcelable {
     private double carryForwardRRSP;
     private double totalTaxableIncome;
     private double totalTaxPayed;
+
+
 
     public String getSin() {
         return sin;
