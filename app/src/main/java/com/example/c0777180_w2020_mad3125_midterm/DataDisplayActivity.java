@@ -32,6 +32,8 @@ public class DataDisplayActivity extends AppCompatActivity {
     TextView dob;
     @InjectView(R.id.ccpcontribution)
     TextView ccpcontribution;
+    @InjectView(R.id.employmentinsurance)
+    TextView employmentinsurance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
