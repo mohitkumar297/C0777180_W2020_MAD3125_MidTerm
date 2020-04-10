@@ -58,7 +58,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         String today = sdf.format(new Date());
 
         Intent i = getIntent();
-        PersonInformation personInformation = i.getParcelableExtra("DATA");
+        CRACustomer personInformation = i.getParcelableExtra("DATA");
 
         String a = personInformation.getSin();
         String b = personInformation.getFullName();

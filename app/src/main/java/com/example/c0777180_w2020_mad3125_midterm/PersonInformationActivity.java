@@ -31,7 +31,7 @@ import butterknife.InjectView;
 
 public class PersonInformationActivity extends AppCompatActivity {
 
-    PersonInformation personInformation;
+    CRACustomer personInformation;
 
     @InjectView(R.id.txtSIN)
     EditText txtSIN;
@@ -134,7 +134,7 @@ public class PersonInformationActivity extends AppCompatActivity {
                     } else {
                         Double gi = Double.parseDouble(txtGrossIncome.getText().toString());
                         Double rc = Double.parseDouble(txtRRSPContributed.getText().toString());
-                        personInformation = new PersonInformation(txtSIN.getText().toString(), txtFirstName.getText().toString(), txtLastName.getText().toString(), dob, checkedBox, gi, rc, age);
+                        personInformation = new CRACustomer(txtSIN.getText().toString(), txtFirstName.getText().toString(), txtLastName.getText().toString(), dob, checkedBox, gi, rc, age);
                         btnSubmit.setTextColor(Color.WHITE);
                         Intent intent = new Intent(PersonInformationActivity.this, DataDisplayActivity.class);
                         intent.putExtra("DATA", personInformation);

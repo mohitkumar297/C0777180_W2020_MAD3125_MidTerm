@@ -3,9 +3,7 @@ package com.example.c0777180_w2020_mad3125_midterm;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.text.DecimalFormat;
-
-public class PersonInformation implements Parcelable {
+public class CRACustomer implements Parcelable {
     private String sin;
     private String firstName;
     private String lastName;
@@ -188,7 +186,7 @@ public class PersonInformation implements Parcelable {
         return getFederalTax()+getProvincialTax();
     }
 
-    public PersonInformation(String sin, String firstName, String lastName, String dateOfBirth, String gender, double grossIncome, double RRSPContributed,int age) {
+    public CRACustomer(String sin, String firstName, String lastName, String dateOfBirth, String gender, double grossIncome, double RRSPContributed, int age) {
         this.sin = sin;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -208,7 +206,7 @@ public class PersonInformation implements Parcelable {
     }
 
 
-    protected PersonInformation(Parcel in) {
+    protected CRACustomer(Parcel in) {
         sin = in.readString();
         firstName = in.readString();
         lastName = in.readString();
@@ -228,15 +226,15 @@ public class PersonInformation implements Parcelable {
         totalTaxPayed = in.readDouble();
     }
 
-    public static final Creator<PersonInformation> CREATOR = new Creator<PersonInformation>() {
+    public static final Creator<CRACustomer> CREATOR = new Creator<CRACustomer>() {
         @Override
-        public PersonInformation createFromParcel(Parcel in) {
-            return new PersonInformation(in);
+        public CRACustomer createFromParcel(Parcel in) {
+            return new CRACustomer(in);
         }
 
         @Override
-        public PersonInformation[] newArray(int size) {
-            return new PersonInformation[size];
+        public CRACustomer[] newArray(int size) {
+            return new CRACustomer[size];
         }
     };
 
