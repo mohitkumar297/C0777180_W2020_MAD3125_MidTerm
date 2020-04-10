@@ -23,8 +23,8 @@ public class SplashActivity extends AppCompatActivity {
                 .withTargetActivity((PersonInformationActivity.class))
                 .withSplashTimeOut(5000)
                 .withBackgroundColor(Color.parseColor("#1a1b29"))
-                .withAfterLogoText("\n\nMohit Kumar\n\n  C0777180")
-                .withLogo(R.drawable.dollar);
+                .withAfterLogoText("Mohit Kumar\n\n  C0777180")
+                .withLogo(R.drawable.ddollar);
 
         config.getAfterLogoTextView().setTextColor(Color.WHITE);
         config.getAfterLogoTextView().setTextSize(20);
