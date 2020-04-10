@@ -228,6 +228,34 @@
             android:id="@+id/rrspcontributed"/>
     </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:background="#305f72">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Maximum RRSP allowed"
+                android:textColor="#fff"
+                android:textSize="16dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="text2"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:id="@+id/maxrrsp"/>
+
+        </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

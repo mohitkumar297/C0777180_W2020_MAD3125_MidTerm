@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -46,6 +45,8 @@ public class DataDisplayActivity extends AppCompatActivity {
     TextView provincialtax;
     @InjectView(R.id.totaltaxpayed)
     TextView totaltaxpayed;
+    @InjectView(R.id.maxrrsp)
+    TextView maxrrsp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         double n = personInformation.getFederalTax();
         double o = personInformation.getProvincialTax();
         double p = personInformation.getTotalTaxPayed();
+        double q = personInformation.getMaxRRSP();
 
 
         SIN.setText(a);
@@ -95,7 +97,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         taxableincome.setText("$ " + String.format("%.2f", m));
         federaltax.setText("$ " + String.format("%.2f", n));
         provincialtax.setText("$ " + String.format("%.2f", o));
-        totaltaxpayed.setText("$ "+String.format("%.2f", p));
-
+        totaltaxpayed.setText("$ " + String.format("%.2f", p));
+        maxrrsp.setText("$ "+String.format("%.2f", q));
     }
 }

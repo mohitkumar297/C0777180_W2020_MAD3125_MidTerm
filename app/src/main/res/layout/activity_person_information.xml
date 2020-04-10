@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_form">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
@@ -23,7 +29,9 @@
             android:textColorHint="@color/form_details_medium"
             android:layout_marginTop="10dp"
             android:id="@+id/inputLayoutSIN"
-
+            app:counterEnabled="true"
+            app:counterMaxLength="9"
+            app:counterTextAppearance="@color/form_details_medium"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -183,12 +191,25 @@
 
 
     </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#fff"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="0dp"
@@ -211,6 +232,19 @@
             android:id="@+id/txtTaxFilingDate"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -250,7 +284,7 @@
             android:layout_marginLeft="10dp"
             android:textColorHint="@color/form_details_medium"
             android:layout_marginRight="10dp"
-
+            android:id="@+id/inputLayoutrrsp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -302,6 +336,7 @@
 
 </LinearLayout>
 
+</ScrollView>
 
 
 <!--<EditText-->

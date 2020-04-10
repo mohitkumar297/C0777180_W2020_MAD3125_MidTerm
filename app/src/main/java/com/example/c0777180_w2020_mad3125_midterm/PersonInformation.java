@@ -23,6 +23,7 @@ public class PersonInformation implements Parcelable {
     private double carryForwardRRSP;
     private double totalTaxableIncome;
     private double totalTaxPayed;
+    private double maxRRSP;
 
 
 
@@ -94,8 +95,13 @@ public class PersonInformation implements Parcelable {
         return taxFilingDate;
     }
 
+    public double getMaxRRSP() {
+        return getGrossIncome()*0.18;
+    }
+
+
     public double getCPP() {
-        if (getGrossIncome()>57400){
+        if (getGrossIncome()>=57400){
             return 2927.40;
         }
         else{
@@ -198,6 +204,7 @@ public class PersonInformation implements Parcelable {
         this.federalTax = getFederalTax();
         this.provincialTax = getProvincialTax();
         this.totalTaxPayed = getTotalTaxPayed();
+        this.maxRRSP = getMaxRRSP();
     }
 
 
